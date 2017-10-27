@@ -1,18 +1,21 @@
 // Gonzalo Chaparro
 // Ejercicio 01 - Capítulo 4
+import java.util.Scanner;
 
 public class Ej01 {
   public static void main(String[] args) {   
     
-    String entrada;
-    
+    Scanner entrada = new Scanner(System.in);
+    String leerPantalla;
+    int dia;
+
     System.out.println("Este programa pide un día de la semana y");
     System.out.println("muestra la primera asignatura del día.");
     System.out.println(" ");
        
     System.out.print("Por favor, introduce un numero de día (1-5): ");
-    entrada = System.console().readLine();
-    int dia = Integer.parseInt(entrada);
+    dia = entrada.nextInt();
+    //dia = Integer.parseInt(leerPantalla);
     
     String nombreAsignatura;
     

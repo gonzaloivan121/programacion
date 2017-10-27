@@ -1,19 +1,22 @@
 // Gonzalo Chaparro
-// Ejercicio 02 - Capítulo 4
+// Ejercicio 03 - Capítulo 4
 
-public class Ej02 {
+public class Ej03 {
   public static void main(String[] args) {
     
     String entrada;
     
-    System.out.println("Este programa pide una hora por teclado y");
-    System.out.println("dependiendo del intervalo de horas nos dice");
-    System.out.println("buenos días, buenas tardes o buenas noches.");
-    System.out.println(" ");
+    System.out.println("Este programa resuelve una ecuación de");
+    System.out.println("primer grado (del tipo ax + b = 0)");
+    System.out.println("----------------------------------------");
     
-    System.out.print("Introduce una hora entre las 0 y las 23: ");
+    System.out.print("Introduce el valor de a: ");
     entrada = System.console().readLine();
-    int hora = Integer.parseInt( entrada );
+    int a = Integer.parseInt( entrada );
+    
+    System.out.print("Introduce ahora el valor de b: ");
+    entrada = System.console().readLine();
+    int b = Integer.parseInt( entrada );
 
     if ((hora < 0) || (hora > 23)) {
       System.out.println("Lo siento, la hora introducida no es correcta (0 - 23).");
