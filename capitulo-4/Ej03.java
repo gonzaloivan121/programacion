@@ -6,28 +6,47 @@ public class Ej03 {
     
     String entrada;
     
-    System.out.println("Este programa resuelve una ecuación de");
-    System.out.println("primer grado (del tipo ax + b = 0)");
+    System.out.println("Este programa escribe el correspondiente");
+    System.out.println("nombre del día de la semana dado un");
+    System.out.println("número del 1 al 7.");
     System.out.println("----------------------------------------");
     
-    System.out.print("Introduce el valor de a: ");
+    System.out.print("Introduce el día: ");
     entrada = System.console().readLine();
-    int a = Integer.parseInt( entrada );
+    int numDia = Integer.parseInt( entrada );
     
-    System.out.print("Introduce ahora el valor de b: ");
-    entrada = System.console().readLine();
-    int b = Integer.parseInt( entrada );
-
-    if ((hora < 0) || (hora > 23)) {
-      System.out.println("Lo siento, la hora introducida no es correcta (0 - 23).");
-    } else if ((hora >= 0) && (hora <= 5)) {
-      System.out.println("Buenas noches.");
-    } else if ((hora >= 6) && (hora <= 12)) {
-      System.out.println("Buenos días.");
-    } else if ((hora >= 13) && (hora <= 20)) {
-      System.out.println("Buenas tardes.");
-    } else if ((hora >= 21) && (hora <= 23)) {
-      System.out.println("Buenas noches.");
+    switch(numDia) {
+      case 1:
+        System.out.println("Lunes.");
+        break;
+      
+      case 2:
+        System.out.println("Martes.");
+        break;
+        
+      case 3:
+        System.out.println("Miércoles.");
+        break;
+      
+      case 4:
+        System.out.println("Jueves.");
+        break;
+        
+      case 5:
+        System.out.println("Viernes.");
+        break;
+        
+      case 6:
+        System.out.println("Sábado.");
+        break;
+        
+      case 7:
+        System.out.println("Domingo.");
+        break;
+        
+      default:
+        System.out.println("Lo siento, el número introducido no es ");
+        System.out.println("válido, no existem más de 7 días.");
     }
   }
 }
