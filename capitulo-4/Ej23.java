@@ -15,7 +15,7 @@ public class Ej23 {
     entrada = System.console().readLine();
     double bImp = Double.parseDouble( entrada );
     
-    System.out.print("Introduce ahora el tipo de IVA (general, reducido o superreducido: ");
+    System.out.print("Introduce ahora el tipo de IVA (general, reducido o superreducido): ");
     entrada = System.console().readLine();
     String tipoIva = entrada;
     
@@ -29,6 +29,7 @@ public class Ej23 {
     double ivaReducido = 0.10;
     double ivaSuperreducido = 0.04;
     double precioConIva = 0;
+    double totalDescuento = 0;
     
     switch (tipoIva) {
       case "general":
@@ -36,26 +37,68 @@ public class Ej23 {
         precioConIva = (bImp + iva);
         switch (cProm) {
           case "nopro":
-            
-          
+            total = precioConIva;
+          break;  
+          case "mitad":
+            total = precioConIva / 2;
+          break;
+          case "meno5":
+            total = precioConIva - 5;
+          break;
+          case "5porc":
+            total = (precioConIva * 0.05) - precioConIva;
+          break;
+          default:
+            System.out.println("La opción seleccionada no existe.");
         }
-        
-        
-        
-        
-        break;
-      
+      break;
+      case "reducido":
+        iva = (bImp * ivaReducido);
+        precioConIva = (bImp + iva);
+        switch (cProm) {
+          case "nopro":
+            total = precioConIva;
+          break;  
+          case "mitad":
+            total = precioConIva / 2;
+          break;
+          case "meno5":
+            total = precioConIva - 5;
+          break;
+          case "5porc":
+            total = (precioConIva * 0.05) - precioConIva;
+          break;
+          default:
+            System.out.println("La opción seleccionada no existe.");
+        } 
+      break;
+      case "superreducido":
+        iva = (bImp * ivaSuperreducido);
+        precioConIva = (bImp + iva);
+        switch (cProm) {
+          case "nopro":
+            total = precioConIva;
+            break;  
+          case "mitad":
+            total = precioConIva / 2;
+            break;
+          case "meno5":
+            total = precioConIva - 5;
+            break;
+          case "5porc":
+            total = (precioConIva * 0.05) - precioConIva;
+            break;
+            default:
+            System.out.println("La opción seleccionada no existe.");
+        }
+      break;
       default:
-        System.out.println("El máximo es hasta el Viernes a las 14:59.");
+        System.out.println("EL IVA seleccionado no existe.");
     }
+    System.out.println("Base imponible:    " + bImp);
+    System.out.println("IVA:               " + iva );
+    System.out.println("Precio con IVA:    " + precioConIva);
+    System.out.println("Cod. Promo:        " + cProm);
+    System.out.println("TOTAL:             " + total);
   }
 }
-
-
-// 5 días = 120 horas
-// 120 horas = 7200 minutos
-
-// viernes = 5760 minutos
-// hasta las 3 = 900
-
-// 5760 + 900 = 6660
