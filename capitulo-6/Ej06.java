@@ -17,19 +17,20 @@ public class Ej06 {
       entrada = System.console().readLine();
       combIntr = Integer.parseInt( entrada );
       
-      if (combIntr == numAAdivinar) {
-        System.out.println("¡Correcto! Lo has adivinado.");
-        i = 0;
-        
-      } else {
-        System.out.println("Lo siento, has fallado. Te quedan " + (i - 1) + " intentos.");
-      }
-      
       if (combIntr > numAAdivinar) {
         System.out.println("El número es más pequeño.");
       } else if (combIntr < numAAdivinar) {
         System.out.println("El número es más grande.");
       }
+      
+      if (combIntr == numAAdivinar) {
+        System.out.println("¡Correcto! Lo has adivinado.");
+        i = 0;
+      } else {
+        System.out.println("Lo siento, has fallado. Te quedan " + (i - 1) + " intentos.");
+      }
     }
+    System.out.println();
+    System.out.println("El número en el que estaba pensando era el " + numAAdivinar);
   }
 }

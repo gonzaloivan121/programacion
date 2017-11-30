@@ -1,6 +1,6 @@
 // Gonzalo Chaparro
-// Ejercicio 07 - Capítulo 6
-public class Ej07 {
+// Ejercicio 08 - Capítulo 6
+public class Ej08 {
   public static void main(String[] args) {
     
     System.out.println("Este programa muestra tres apuestas de la quiniela");
@@ -9,6 +9,7 @@ public class Ej07 {
     System.out.println();
     
     for (int i = 1; i <= 14; i++) {
+      int random = (int)((Math.random() * 100) + 1);
       
       System.out.printf("%3d.  ", i);
       
@@ -18,15 +19,27 @@ public class Ej07 {
         
         switch (apuestaNum) {
           case 1:
-            apuesta = " 1 ";
+            if (random <= 50) {
+              apuesta = " o ";
+            } else {
+              apuesta = " 1 ";
+            }
             break;
           
           case 2:
-            apuesta = " X ";
+            if (random <= 33) {
+              apuesta = " o ";
+            } else {
+              apuesta = " X ";
+            }
             break;
           
           case 3:
-            apuesta = " 2 ";
+            if (random <= 16) {
+              apuesta = " o ";
+            } else {
+              apuesta = " 2 ";
+            }
             break;
           
           default:
@@ -43,18 +56,31 @@ public class Ej07 {
       for (int columna = 0; columna < 3; columna++) {
         int apuestaNum = ((int)(Math.random() * 3) + 1);
         String apuesta = "";
+        int random = (int)((Math.random() * 100) + 1);
         
         switch (apuestaNum) {
           case 1:
-            apuesta = " 1 ";
+            if (random <= 50) {
+              apuesta = " o ";
+            } else {
+              apuesta = " 1 ";
+            }
             break;
           
           case 2:
-            apuesta = " X ";
+            if (random <= 33) {
+              apuesta = " o ";
+            } else {
+              apuesta = " X ";
+            }
             break;
           
           case 3:
-            apuesta = " 2 ";
+            if (random <= 16) {
+              apuesta = " o ";
+            } else {
+              apuesta = " 2 ";
+            }
             break;
           
           default:
