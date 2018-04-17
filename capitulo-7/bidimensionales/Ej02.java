@@ -1,6 +1,6 @@
 // Gonzalo Chaparro
-// Ejercicio 01 - Capítulo 7.2
-public class Ej01 {
+// Ejercicio 02 - Capítulo 7.2
+public class Ej02 {
   public static void main(String[] args) {
     
     System.out.println("Este programa define un array de 12 números enteros");
