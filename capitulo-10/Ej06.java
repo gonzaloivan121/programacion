@@ -1,9 +1,3 @@
-/**
- * Ejemplo de uso de la clase HashMap
- * 
- * @author Luis José Sánchez
- */
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,6 +10,7 @@ public class Ej06 {
     acceso.put("usuario", "usuario");
     acceso.put("gonzalo", "psychosphere123");
     acceso.put("invitado", "");
+    acceso.put("boss", "boss123");
     
     for (int i = 3; i > 0; i--) {
       System.out.print("Usuario: ");
@@ -24,30 +19,36 @@ public class Ej06 {
       System.out.print("Contraseña: ");
       String contrasena = System.console().readLine();
       
-      if (acceso.containsKey(usuario) && contrasena.equals(acceso.get(usuario))) {
-        System.out.println("Ha accedido al área restringida.");
-        i = 0;
+      if (!acceso.containsKey(usuario)) {
+        System.out.println("El usuario especificado no existe.\n");
         
       } else {
-        System.out.println("La contraseña no coincide.");
-        
-        switch (i) {
-          case 3:
-            System.out.println("Le quedan 2 intentos.\n");
+      
+        if (acceso.containsKey(usuario) && contrasena.equals(acceso.get(usuario))) {
+          System.out.println("Ha accedido al área restringida.");
+          i = 0;
+          
+        } else {
+          System.out.println("La contraseña no coincide.");
+          
+          switch (i) {
+            case 3:
+              System.out.println("Le quedan 2 intentos.\n");
+              break;
+              
+            case 2:
+              System.out.println("Le queda 1 intento.\n");
+              break;
+              
+            case 1:
+              System.out.println("Lo siento, no tiene acceso al área restringida.");
+              break;
+              
+            default:
             break;
-            
-          case 2:
-            System.out.println("Le queda 1 intento.\n");
-            break;
-            
-          case 1:
-            System.out.println("Lo siento, no tiene acceso al área restringida.");
-            break;
-            
-          default:
-          break;
+          }
+                  
         }
-                
       }
     }    
     
