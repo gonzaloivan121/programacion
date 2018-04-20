@@ -12,10 +12,12 @@ public class Ej06 {
     acceso.put("invitado", "");
     acceso.put("boss", "boss123");
     
+    System.out.println("Bienvenido, inicie sesión para acceder al área restringida.\n");
+    
     for (int i = 3; i > 0; i--) {
       System.out.print("Usuario: ");
       String usuario = System.console().readLine();
-    
+      
       System.out.print("Contraseña: ");
       String contrasena = System.console().readLine();
       
@@ -47,10 +49,10 @@ public class Ej06 {
             default:
             break;
           }
-                  
+          
         }
       }
-    }    
+    }
     
   }
 }

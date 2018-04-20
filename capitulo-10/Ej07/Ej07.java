@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Ej05 {
+public class Ej07 {
   public static void main(String[] args) {
 
     ArrayList<Disco> album = new ArrayList<Disco>();
